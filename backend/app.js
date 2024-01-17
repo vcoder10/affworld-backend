@@ -12,15 +12,7 @@ const cookieParser = require("cookie-parser");
 // }
 
 // Use the cors middleware
-app.use(
-  cors({
-    origin: "http://localhost:3000", // replace with the actual origin of your React app
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-    optionsSuccessStatus: 204,
-    allowedHeaders: ["Content-Type", "Authorization"], // add Content-Type to the allowed headers
-  })
-);
+app.use(cors());
 
 app.use(express.json());
 app.use(cookieParser());
